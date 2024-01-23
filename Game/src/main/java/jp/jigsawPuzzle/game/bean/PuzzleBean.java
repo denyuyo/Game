@@ -8,6 +8,16 @@ public class PuzzleBean {
 	private String imagePath;
 	private int pieceCount;
 	
+	public PuzzleBean(int puzzleId, String title, String category, String imagePath, int pieceCount) {
+		this.puzzleId = puzzleId;
+		this.title = title;
+		this.category = category;
+		this.imagePath = imagePath;
+		this.pieceCount = pieceCount;
+	}
+	public PuzzleBean() {
+	}
+	
 	public int getPuzzleId() {
 		return puzzleId;
 	}

@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ジグソーパズル</title>
 </head>
 <body>
-
+<form action="/Game/SuccessServlet" method="post" name="Form1">
+	<div class="form-group">
+		<input class="button" type="submit" name="back" value="もう一度遊ぶ">
+	</div>
+</form>
 </body>
 </html>

@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>エラー画面</title>
 </head>
 <body>
-
+	<h1>That's odd</h1>
+	<p>${errorMessage }</p>
+	<p>This page appears to be missing.</p>
 </body>
 </html>

@@ -17,12 +17,39 @@
   </resource-ref>
   
   <servlet>
+	<servlet-name>TitleServlet</servlet-name>
+	<servlet-class>jp.jigsawPuzzle.game.TitleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>TitleServlet</servlet-name>
+	<url-pattern>/TitleServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
 	<servlet-name>PuzzleServlet</servlet-name>
 	<servlet-class>jp.jigsawPuzzle.game.PuzzleServlet</servlet-class>
   </servlet>
   <servlet-mapping>
 	<servlet-name>PuzzleServlet</servlet-name>
 	<url-pattern>/PuzzleServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GenreServlet</servlet-name>
+	<servlet-class>jp.jigsawPuzzle.game.GenreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GenreServlet</servlet-name>
+	<url-pattern>/GenreServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>SuccessServlet</servlet-name>
+	<servlet-class>jp.jigsawPuzzle.game.SuccessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>SuccessServlet</servlet-name>
+	<url-pattern>/SuccessServlet</url-pattern>
   </servlet-mapping>
   
  </web-app>
