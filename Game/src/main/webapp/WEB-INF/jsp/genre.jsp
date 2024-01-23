@@ -20,12 +20,13 @@
 	<h2>ジャンル一覧</h2>
 	<ul>
 		<%
-			PuzzleDAO dao = new PuzzleDAO();
-			ArrayList<PuzzleBean> categories = dao.getAllCategories();
-			for (PuzzleBean category : categories) {
-		%>
-		<%= category.getCategory()  %>
-		<% } %>
+        PuzzleDAO dao = new PuzzleDAO();
+        ArrayList<PuzzleBean> categories = dao.getAllCategories();
+        for (PuzzleBean categoryBean : categories) {
+            String category = categoryBean.getCategory();
+    %>
+        <li><a href="/Game/PuzzleServlet?category=<%= category %>"><%= category %></a></li>
+    <% } %>
 	</ul>
 </body>
 </html>

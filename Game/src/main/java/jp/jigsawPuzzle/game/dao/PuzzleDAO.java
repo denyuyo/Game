@@ -88,6 +88,30 @@ public class PuzzleDAO {
 		return categories;
 	}
 	
+	public PuzzleBean getRandomPuzzleByCategory(String category) throws NamingException {
+		PuzzleBean puzzle = null;
+	    String sql = "SELECT * FROM Puzzles WHERE category = ? ORDER BY RAND() LIMIT 1";
+	    Connection connection = null;
+	    try {
+	    	connection = DbSource.getDateSource().getConnection();
+			PreparedStatement statement = connection.prepareStatement(sql);
+	        statement.setString(1, category);
+	        ResultSet resultSet = statement.executeQuery();
+
+	        if (resultSet.next()) {
+	            // レコードからPuzzleオブジェクトを生成
+	            int id = resultSet.getInt("puzzle_id");
+	            String title = resultSet.getString("title");
+	            String imagePath = resultSet.getString("image_path");
+	            int pieceCount = resultSet.getInt("piece_count");
+	            puzzle = new PuzzleBean(id, title, category, imagePath, pieceCount);
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return puzzle;
+	}
+	
 	// 特定カテゴリーからランダムなパズルIDを取得するメソッド
 	public int getRandomPuzzleIdByCategory(String category) throws NamingException {
 		int puzzleId = -1;
