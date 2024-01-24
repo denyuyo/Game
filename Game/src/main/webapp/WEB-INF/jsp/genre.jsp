@@ -28,5 +28,6 @@
         <li><a href="/Game/PuzzleServlet?category=<%= category %>"><%= category %></a></li>
     <% } %>
 	</ul>
+	<img src="/Game/images/neko1.png">
 </body>
 </html>

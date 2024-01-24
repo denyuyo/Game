@@ -29,7 +29,7 @@ public class PuzzleDAO {
 			ResultSet resultSet = statement.executeQuery();
 			
 			while (resultSet.next()) {
-			int id = resultSet.getInt("puzzle_id");
+				int id = resultSet.getInt("puzzle_id");
 				String title = resultSet.getString("title");
 				String category = resultSet.getString("category");
 				String imagePath = resultSet.getString("image_path");
